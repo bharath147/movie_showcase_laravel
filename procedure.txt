@@ -1,0 +1,29 @@
+clone repo
+
+composer update --no-scripts (in some instances only)
+
+composer install
+
+php artisan key:generate
+
+php artisan migrate
+
+php artisan db:seed
+
+
+php artisan serve
+
+php artisan permission:create-role user
+
+php artisan permission:create-role admin
+
+
+To create admin role
+
+Register a User
+
+php artisan tinker
+
+$user = App\Models\User::find(1);
+
+$user -> assignRole("admin");
